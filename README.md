@@ -10,6 +10,8 @@ If this was not a <i>demo</i> the game would include the following:
 - the quickest opponent would be randomized.
 - each level would be progressively harder than the previous
 - - - -
+![picture alt](http://www.brightlightpictures.com/assets/images/portfolio/thethaw_header.jpg "Title is optional")
+- - - -
 <b>This game is only a demo and was created in about 5 hours.</b>
 
 <b>© 2017 Alex Cassell, All Rights Reserved</b><br />

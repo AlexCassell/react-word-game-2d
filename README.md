@@ -10,7 +10,8 @@ If this was not a <i>demo</i> the game would include the following:
 - the quickest opponent would be randomized.
 - each level would be progressively harder than the previous
 - - - -
-![picture alt](http://www.brightlightpictures.com/assets/images/portfolio/thethaw_header.jpg "Title is optional")
+![picture alt](https://github.com/AlexCassell/react-word-game-2d/blob/master/src/images/screenshots/screenshot-ingame-small.png?raw=true "During Level")
+![picture alt](https://github.com/AlexCassell/react-word-game-2d/blob/master/src/images/screenshots/screenshot-post-level-small.png?raw=true "Level Complete")
 - - - -
 <b>This game is only a demo and was created in about 5 hours.</b>
 

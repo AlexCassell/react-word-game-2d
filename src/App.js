@@ -10,13 +10,6 @@ import {currentCorrectAnswer} from './components/textToSpeech.js';
 import {currentIncorrectAnswerOne} from './components/textToSpeech.js';
 import {currentIncorrectAnswerTwo} from './components/textToSpeech.js';
 
-
-import playerRocket from './images/rockets/playerRocketRegular.png';
-import greenRocket from './images/rockets/greenRocketRegular.png';
-import redRocket from './images/rockets/redRocketRegular.png';
-import pinkRocket from './images/rockets/pinkRocketRegular.png';
-import endRocket from './images/rockets/playerRocketRotatedRegular.png';
-
 let originalTime = 45, time = 0, timeLeft = 0, tmpRanking = "", position = 1, answersCorrect = 0, answersIncorrect = 0;
 
 //sentences
@@ -66,6 +59,7 @@ class App extends Component {
     answersCorrect = 0;
     answersIncorrect = 0;
     score = 0;
+    x = 0;
     setTimeout(this.saveTime.bind(this), 3000);
     setTimeout(this.startRace.bind(this), 3000);
     this.backgroundController();
@@ -227,10 +221,10 @@ setRace(){
   this.setState({
     'player':
     <div> 
-    <div className="player"><img src={playerRocket} alt={"Purple Rocket"}/></div>
-    <div className="opponentOne"><img src={greenRocket} alt={"Green Rocket"}/></div>
-    <div className="opponentTwo"><img src={redRocket} alt={"Red Rocket"}/></div>
-    <div className="opponentThree"><img src={pinkRocket} alt={"Pink Rocket"}/></div>
+    <div className="player"/>
+    <div className="opponentOne"/>
+    <div className="opponentTwo"/>
+    <div className="opponentThree"/>
     </div>
 });
 // this.startRace();//dev only
@@ -238,12 +232,12 @@ setRace(){
 
 startRace(){
   this.setState({
-    'player': <div className="player"><img src={playerRocket} alt={"Purple Rocket"}/></div>,
+    'player': <div className="player"/>,
     'opponents':
     <div> 
-    <div className="opponentOneMoving"><div className="opponentShake"><img src={greenRocket} alt={"Green Rocket"}/></div></div>
-    <div className="opponentTwoMoving"><div className="opponentShake"><img src={redRocket} alt={"Red Rocket"}/></div></div>
-    <div className="opponentThreeMoving"><div className="opponentShake"><img src={pinkRocket} alt={"Pink Rocket"}/></div></div>
+    <div className="opponentOneMoving"><div className="opponentShake"></div></div>
+    <div className="opponentTwoMoving"><div className="opponentShake"></div></div>
+    <div className="opponentThreeMoving"><div className="opponentShake"></div></div>
     </div>
 });
 }
@@ -252,55 +246,55 @@ moveForward(){
   if(position === 1){
     position ++;
     this.setState({
-      'player': <div className="playerPosTwo"><img src={playerRocket} alt={"Purple Rocket"}/></div>
+      'player': <div className="playerPosTwo"></div>
     });
   }
   else if(position === 2){
     position ++;
     this.setState({
-      'player': <div className="playerPosThree"><img src={playerRocket} alt={"Purple Rocket"}/></div>
+      'player': <div className="playerPosThree"></div>
     });
   }
   else if(position === 3){
     position ++;
     this.setState({
-      'player': <div className="playerPosFour"><img src={playerRocket} alt={"Purple Rocket"}/></div>
+      'player': <div className="playerPosFour"></div>
     });
   }
   else if(position === 4){
     position ++;
     this.setState({
-      'player': <div className="playerPosFive"><img src={playerRocket} alt={"Purple Rocket"}/></div>
+      'player': <div className="playerPosFive"></div>
     });
   }
   else if(position === 5){
     position ++;
     this.setState({
-      'player': <div className="playerPosSix"><img src={playerRocket} alt={"Purple Rocket"}/></div>
+      'player': <div className="playerPosSix"></div>
     });
   }
   else if(position === 6){
     position ++;
     this.setState({
-      'player': <div className="playerPosSeven"><img src={playerRocket} alt={"Purple Rocket"}/></div>
+      'player': <div className="playerPosSeven"></div>
     });
   }
   else if(position === 7){
     position ++;
     this.setState({
-      'player': <div className="playerPosEight"><img src={playerRocket} alt={"Purple Rocket"}/></div>
+      'player': <div className="playerPosEight"></div>
     });
   }
   else if(position === 8){
     position ++;
     this.setState({
-      'player': <div className="playerPosNine"><img src={playerRocket} alt={"Purple Rocket"}/></div>
+      'player': <div className="playerPosNine"></div>
     });
   }
   else if(position === 9){
     position ++;
     this.setState({
-      'player': <div className="playerPosTen"><img src={playerRocket} alt={"Purple Rocket"}/></div>
+      'player': <div className="playerPosTen"></div>
     });
     this.setRank();
   }
@@ -356,7 +350,7 @@ preRaceOver(){
         </div>,
     'player':
     <div>
-      <div className="endOfRound"><img src={endRocket} alt={"Purple Rocket"}/></div>
+      <div className="endOfRound"/>
       <div className="planetsWrapper">
         <div className="planetOneShadow"/>
         <div className="planetTwoShadow"/>
@@ -404,7 +398,7 @@ raceOver(){
   if(answersCorrect > 0 && x === 0){
     this.setState({
       'player': <div>
-      <div className="endOfRound"><img src={endRocket} alt={"Purple Rocket"}/></div>
+      <div className="endOfRound"/>
       <div className="planetsWrapper">
         <div className="planetOne"/>
         <div className="planetTwoShadow"/>
@@ -423,7 +417,7 @@ raceOver(){
   if(answersCorrect > 1 && x === 1){
     this.setState({
       'player': <div>
-      <div className="endOfRound"><img src={endRocket} alt={"Purple Rocket"}/></div>
+      <div className="endOfRound"/>
       <div className="planetsWrapper">
         <div className="planetOne"/>
         <div className="planetTwo"/>
@@ -443,7 +437,7 @@ raceOver(){
   if(answersCorrect > 2 && x === 2){
     this.setState({
       'player': <div>
-      <div className="endOfRound"><img src={endRocket} alt={"Purple Rocket"}/></div>
+      <div className="endOfRound"/>
       <div className="planetsWrapper">
         <div className="planetOne"/>
         <div className="planetTwo"/>
@@ -463,7 +457,7 @@ raceOver(){
   if(answersCorrect > 3 && x === 3){
     this.setState({
       'player': <div>
-      <div className="endOfRound"><img src={endRocket} alt={"Purple Rocket"}/></div>
+      <div className="endOfRound"/>
       <div className="planetsWrapper">
         <div className="planetOne"/>
         <div className="planetTwo"/>
@@ -483,7 +477,7 @@ raceOver(){
   if(answersCorrect > 4 && x === 4){
     this.setState({
       'player': <div>
-      <div className="endOfRound"><img src={endRocket} alt={"Purple Rocket"}/></div>
+      <div className="endOfRound"/>
       <div className="planetsWrapper">
         <div className="planetOne"/>
         <div className="planetTwo"/>
@@ -503,7 +497,7 @@ raceOver(){
   if(answersCorrect > 5 && x === 5){
     this.setState({
       'player': <div>
-      <div className="endOfRound"><img src={endRocket} alt={"Purple Rocket"}/></div>
+      <div className="endOfRound"/>
       <div className="planetsWrapper">
         <div className="planetOne"/>
         <div className="planetTwo"/>
@@ -523,7 +517,7 @@ raceOver(){
   if(answersCorrect > 6 && x === 6){
     this.setState({
       'player': <div>
-      <div className="endOfRound"><img src={endRocket} alt={"Purple Rocket"}/></div>
+      <div className="endOfRound"/>
       <div className="planetsWrapper">
         <div className="planetOne"/>
         <div className="planetTwo"/>
@@ -543,7 +537,7 @@ raceOver(){
   if(answersCorrect > 7  && x === 7){
     this.setState({
       'player': <div>
-      <div className="endOfRound"><img src={endRocket} alt={"Purple Rocket"}/></div>
+      <div className="endOfRound"/>
       <div className="planetsWrapper">
         <div className="planetOne"/>
         <div className="planetTwo"/>
@@ -563,7 +557,7 @@ raceOver(){
   if(answersCorrect > 8 && x === 8){
     this.setState({
       'player': <div>
-      <div className="endOfRound"><img src={endRocket} alt={"Purple Rocket"}/></div>
+      <div className="endOfRound"/>
       <div className="planetsWrapper">
         <div className="planetOne"/>
         <div className="planetTwo"/>

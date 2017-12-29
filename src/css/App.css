@@ -39,40 +39,9 @@ body {
   transform: scale(1.1);
 }
 
-.App-header {
-  background-color: black;
-  border-bottom: solid 4px #23FF00;
-  height: 150px;
-  width: calc(100% - 40px);
-  padding: 20px;
-  color: #23FF00;
-  /* background-image: url("../images/backgrounds/header.png"); */
-  background-size: contain;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  z-index: 1;
-}
 
-.App-title {
-  font-size: 1.5em;
-}
 
-.App-intro {
-  font-size: large;
-}
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-.sentence {
-  top:200px;
-  color: #23FF00;
-  font-size: 5em;
-}
 .redBackground {
   background-color: #FF0013;
   position: absolute;
@@ -91,6 +60,821 @@ body {
   z-index: -1;
 }
 
+@media screen and (max-height : 700px) {
+  /* Smaller */
+  .sentence {
+    top:200px;
+    color: #23FF00;
+    font-size: 2em;
+  }
+
+  .App-header {
+    background-color: black;
+    border-bottom: solid 4px #23FF00;
+    height: 150px;
+    width: calc(100% - 40px);
+    padding: 20px;
+    color: #23FF00;
+    /* background-image: url("../images/backgrounds/header.png"); */
+    background-size: contain;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    z-index: 1;
+  }
+
+  .timer {
+    color:#23FF00;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
+    font-size: 7rem;
+  }
+  
+  .timer__blinking {
+    color:#FF0013;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #23FF00;
+    animation: opacity 0.5s ease-in-out infinite;
+    opacity: 1;
+  }
+  
+  .rank {
+    position: relative;
+    font-family:Nasa;
+    top:25px;
+    color:#23FF00;
+    font-size: 5em;
+    text-shadow: 2px 2px #0040FF;
+  }
+    
+  
+  /* All Buttons */
+  .button__Wrapper{
+    position: absolute; 
+    z-index: 5;
+    left: calc(50% - 125px);
+    top: calc(50% - 55px);
+    align-items: center;
+  }
+  
+  .buttons__start {
+    cursor: pointer;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px; 
+    color: #23FF00;
+    font-size: 2.5em;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    border: solid 5px #FF0013;
+    background-color: #FFAE00;
+    -webkit-transition-duration: 0.4s; /* Apple - maybe not needed anymore? */
+    transition-duration: 0.4s;
+  }
+  
+  .buttons__start:hover {
+    border-radius: 0px;
+    border: solid 5px #23FF00;
+    background-color: #FF0013;
+    font-size: 2.8em;
+    text-shadow: 2px 2px #23FF00;
+    color: black;
+  }
+  
+  .buttons__words{
+    width: 100px;
+    height: 25px;
+  }
+  
+  .answerWrapper{
+  }
+  
+  .buttons__answers{
+    position: relative;
+    border: solid 5px #FF0013;
+    height: 50px;
+    color: white;
+    font-size: 2em;
+    background: transparent;
+  }
+  
+  .buttons__answers:hover {
+    border-radius: 25px;
+    border: solid 5px #23FF00;
+  }
+  
+  .buttons__answers:active {
+    background-color: #23FF00;
+    border: solid 5px #FFAE00;
+  }
+  
+  /* Player */
+
+.player{
+  position: absolute;
+  top: 325px;
+  left: 0%;
+  height:98px;
+  width:100px;
+  background-repeat: no-repeat;
+  background-image: url("../images/rockets/playerRocketRegular.png");
+  background-size: contain;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  }
+  
+  .playerPosTwo{
+    position: absolute;
+    top: 325px;
+    left: 15%;
+    height:98px;
+    width:100px;
+    background-repeat: no-repeat;
+    background-image: url("../images/rockets/playerRocketRegular.png");
+    background-size: contain;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    }
+  
+    .playerPosThree{
+      position: absolute;
+      top: 325px;
+      left: 25%;
+      height:98px;
+      width:100px;
+      background-repeat: no-repeat;
+      background-image: url("../images/rockets/playerRocketRegular.png");
+      background-size: contain;
+      -webkit-background-size: contain;
+      -moz-background-size: contain;
+      -o-background-size: contain;
+      }
+  
+    .playerPosFour{
+      position: absolute;
+      top: 325px;
+      left: 35%;
+      height:98px;
+      width:100px;
+      background-repeat: no-repeat;
+      background-image: url("../images/rockets/playerRocketRegular.png");
+      background-size: contain;
+      -webkit-background-size: contain;
+      -moz-background-size: contain;
+      -o-background-size: contain;
+      }
+  
+    .playerPosFive{
+      position: absolute;
+      top: 325px;
+      left: 45%;
+      height:98px;
+      width:100px;
+      background-repeat: no-repeat;
+      background-image: url("../images/rockets/playerRocketRegular.png");
+      background-size: contain;
+      -webkit-background-size: contain;
+      -moz-background-size: contain;
+      -o-background-size: contain;
+      }
+    
+    .playerPosSix{
+      position: absolute;
+      top: 325px;
+      left: 55%;
+      height:98px;
+      width:100px;
+      background-repeat: no-repeat;
+      background-image: url("../images/rockets/playerRocketRegular.png");
+      background-size: contain;
+      -webkit-background-size: contain;
+      -moz-background-size: contain;
+      -o-background-size: contain;
+      }
+  
+    .playerPosSeven{
+      position: absolute;
+      top: 325px;
+      left: 65%;
+      height:98px;
+      width:100px;;
+      background-repeat: no-repeat;
+      background-image: url("../images/rockets/playerRocketRegular.png"); 
+      background-size: contain;
+      -webkit-background-size: contain;
+      -moz-background-size: contain;
+      -o-background-size: contain;
+      }
+  
+    .playerPosEight{
+      position: absolute;
+      top: 325px;
+      left: 75%;
+      height:98px;
+      width:100px;
+      background-repeat: no-repeat;
+      background-image: url("../images/rockets/playerRocketRegular.png"); 
+      background-size: contain;
+      -webkit-background-size: contain;
+      -moz-background-size: contain;
+      -o-background-size: contain;
+      }
+  
+    .playerPosNine{
+      position: absolute;
+      top: 325px;
+      left: 85%;
+      height:98px;
+      width:100px;
+      background-repeat: no-repeat;
+      background-image: url("../images/rockets/playerRocketRegular.png");
+      background-size: contain;
+      -webkit-background-size: contain;
+      -moz-background-size: contain;
+      -o-background-size: contain;
+      }
+    
+    .playerPosTen{
+      position: absolute;
+      top: 325px;
+      left: 110%; 
+      height:98px;
+      width:100px;
+      background-repeat: no-repeat;
+      background-image: url("../images/rockets/playerRocketRegular.png");
+      background-size: contain;
+      -webkit-background-size: contain;
+      -moz-background-size: contain;
+      -o-background-size: contain;
+      }
+  
+    .endOfRound{
+      position: absolute;
+      padding-top: 15px;
+      animation: shake 0.5s;
+      animation-iteration-count: infinite;
+      left: calc(50% - 110px);
+      height:400px;
+      width:197px;
+      background-repeat: no-repeat;
+      background-image: url("../images/rockets/playerRocketRotatedRegular.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      -webkit-background-size: contain;
+      -moz-background-size: contain;
+      -o-background-size: contain;
+    }
+  
+  
+  
+  /* Opponent 1 */
+  .opponentOne{
+    position: absolute;
+    top: 400px;
+    left: 0%;
+    height: 99px;
+    width:100px;
+    background-repeat: no-repeat;
+    background-image: url("../images/rockets/greenRocketRegular.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+  }
+  
+  .opponentOneMoving{
+    position: absolute;
+    top: 400px;
+    height: 99px;
+    width:100px;
+    background-repeat: no-repeat;
+    background-image: url("../images/rockets/greenRocketRegular.png");
+    -webkit-animation-name: fastestOpponent; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 60s; /* Safari 4.0 - 8.0 */
+    animation-name: fastestOpponent;
+    animation-duration: 60s;
+    background-size: contain;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+  }
+
+  /* Opponent 2 */
+  
+  .opponentTwo{
+    position: absolute;
+    top: 475px;
+    left: 0%;
+    height:99px;
+    width:100px;
+    background-repeat: no-repeat;
+    background-image: url("../images/rockets/redRocketRegular.png");
+    background-size: contain;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    }
+  
+    .opponentTwoMoving{
+      position: absolute;
+      top: 475px;
+      height:99px;
+      width:100px;
+      background-repeat: no-repeat;
+      background-image: url("../images/rockets/redRocketRegular.png");
+      -webkit-animation-name: secondFastestOpponent; /* Safari 4.0 - 8.0 */
+      -webkit-animation-duration: 75s; /* Safari 4.0 - 8.0 */
+      animation-name: secondFastestOpponent;
+      animation-duration: 75s;
+      background-size: contain;
+      -webkit-background-size: contain;
+      -moz-background-size: contain;
+      -o-background-size: contain;
+    }
+  
+      /* Opponent 3 */
+  
+  .opponentThree{
+    position: absolute;
+    top: 550px;
+    left: 0%;
+    height:99px;
+    width:100px;
+    background-repeat: no-repeat;
+    background-image: url("../images/rockets/pinkRocketRegular.png");
+    background-size: contain;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+  }
+  
+  .opponentThreeMoving{
+    position: absolute;
+    top: 550px;
+    height:99px;
+    width:100px;
+    background-repeat: no-repeat;
+    background-image: url("../images/rockets/pinkRocketRegular.png");
+    -webkit-animation-name: thirdFastestOpponent; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 110s; /* Safari 4.0 - 8.0 */
+    animation-name: thirdFastestOpponent;
+    animation-duration: 110s;
+    background-size: contain;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+  }
+  
+  
+  
+  /* the end of each round */
+  .planetsWrapper{
+    position: absolute;
+    width: 400px;
+    bottom: calc(50% - 75px);
+    left: 15px;
+    /* bottom: 10px; */
+  }
+  
+  .planetOne {
+    position: absolute;
+    -webkit-animation: onLoadScale 3s;
+    animation: onLoadScale 3s;
+    -webkit-transform: scale(0,0); 
+    transform: scale(0,0);
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    background-image: url("../images/planets/redPlanet.png");
+    height: 75px;
+    width: 75px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+  }
+  
+  .planetTwo {
+    position: absolute;
+    left: 100px;
+    -webkit-animation: onLoadScale 3s;
+    animation: onLoadScale 3s;
+    -webkit-transform: scale(0,0); 
+    transform: scale(0,0);
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    background-image: url("../images/planets/redPlanet.png");
+    height: 75px;
+    width: 75px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+  }
+  
+  .planetThree {
+    position: absolute;
+    left: 200px;
+    -webkit-animation: onLoadScale 3s;
+    animation: onLoadScale 3s;
+    -webkit-transform: scale(0,0); 
+    transform: scale(0,0);
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    background-image: url("../images/planets/redPlanet.png");
+    height: 75px;
+    width: 75px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+  }
+  
+  .planetFour {
+    position: absolute;
+    left: 300px;
+    -webkit-animation: onLoadScale 3s;
+    animation: onLoadScale 3s;
+    -webkit-transform: scale(0,0); 
+    transform: scale(0,0);
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    background-image: url("../images/planets/redPlanet.png");
+    height: 75px;
+    width: 75px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+  }
+  
+  .planetFive {
+    position: absolute;
+    left: 400px;
+    -webkit-animation: onLoadScale 3s;
+    animation: onLoadScale 3s;
+    -webkit-transform: scale(0,0); 
+    transform: scale(0,0);
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    background-image: url("../images/planets/redPlanet.png");
+    height: 75px;
+    width: 75px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+  }
+  
+  .planetSix {
+    position: absolute;
+    right: -500px;
+    -webkit-animation: onLoadScale 3s;
+    animation: onLoadScale 3s;
+    -webkit-transform: scale(0,0); 
+    transform: scale(0,0);
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    background-image: url("../images/planets/redPlanet.png");
+    height: 75px;
+    width: 75px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+  }
+  
+  .planetSeven {
+    position: absolute;
+    right: -600px;
+    -webkit-animation: onLoadScale 3s;
+    animation: onLoadScale 3s;
+    -webkit-transform: scale(0,0); 
+    transform: scale(0,0);
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    background-image: url("../images/planets/redPlanet.png");
+    height: 75px;
+    width: 75px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+  }
+  
+  .planetEight {
+    position: absolute;
+    right: -700px;
+    -webkit-animation: onLoadScale 3s;
+    animation: onLoadScale 3s;
+    -webkit-transform: scale(0,0); 
+    transform: scale(0,0);
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    background-image: url("../images/planets/redPlanet.png");
+    height: 75px;
+    width: 75px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+  }
+  
+  .planetNine {
+    position: absolute;
+    right: -900px;
+    top: -50px;
+    -webkit-animation: onLoadScale 4s;
+    animation: onLoadScale 4s;
+    -webkit-transform: scale(0,0); 
+    transform: scale(0,0);
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    background-image: url("../images/planets/redPlanet.png");
+    height: 165px;
+    width: 165px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+  }
+  
+  
+  
+  /* shadow planet */
+  .planetOneShadow {
+    position: absolute;
+    background-image: url("../images/planets/redPlanetShadow.png");
+    height: 75px;
+    width: 75px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+  }
+  
+  .planetTwoShadow {
+    position: absolute;
+    left: 100px;
+    background-image: url("../images/planets/redPlanetShadow.png");
+    height: 75px;
+    width: 75px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+  }
+  
+  .planetThreeShadow {
+    position: absolute;
+    left: 200px;
+    background-image: url("../images/planets/redPlanetShadow.png");
+    height: 75px;
+    width: 75px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+  }
+  
+  .planetFourShadow {
+    position: absolute;
+    left: 300px;
+    background-image: url("../images/planets/redPlanetShadow.png");
+    height: 75px;
+    width: 75px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+  }
+  
+  .planetFiveShadow {
+    position: absolute;
+    left: 400px;
+    background-image: url("../images/planets/redPlanetShadow.png");
+    height: 75px;
+    width: 75px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+  }
+  
+  .planetSixShadow {
+    position: absolute;
+    right: -500px;
+    background-image: url("../images/planets/redPlanetShadow.png");
+    height: 75px;
+    width: 75px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+  }
+  
+  .planetSevenShadow {
+    position: absolute;
+    right: -600px;
+    background-image: url("../images/planets/redPlanetShadow.png");
+    height: 75px;
+    width: 75px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+  }
+  
+  .planetEightShadow {
+    position: absolute;
+    right: -700px;
+    background-image: url("../images/planets/redPlanetShadow.png");
+    height: 75px;
+    width: 75px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+  }
+  
+  .planetNineShadow {
+    position: absolute;
+    right: -900px;
+    top: -50px;
+    background-image: url("../images/planets/redPlanetShadow.png");
+    height: 165px;
+    width: 165px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+  }
+  
+  /* End of Round Display Stats */
+  .answered {
+    position: absolute;
+    /* font-family: School; */
+    font-size: 1.5em;
+    top: 200px;
+    height: 25%;
+    width: 35%;
+  }
+  
+  .answeredCorrectly{
+    color: white;
+    padding: 25px;
+  }
+  
+  .answeredIncorrectly{
+    padding: 25px;
+    color: #FF0013;
+  }
+  
+  .stats__score {
+    position: absolute;
+    padding: 25px;
+    color: white;
+    font-size: 1.5em;
+    top: 200px;
+    right: 75px;
+    height: 25%;
+    width: 35%;
+  }
+  
+  .stats__score__underline {
+    text-decoration: underline;
+  }
+  
+  .stats__score__textColor {
+    color: #23FF00;
+  }
+  
+  /* Top of Page Stats */
+  .scoresWrapper{
+    padding-top: 20px;
+    position: absolute;
+    top: 0px;
+    right: 100px;
+    font-size: 2em;
+    color: #23FF00;
+  }
+  
+  .overallScore{
+    position: relative;
+  }
+  
+  .score {
+    position: relative;
+  }
+  
+  
+  /* Restart game */
+  
+  .restartGame {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+  }
+  
+  .buttons__restartGame {
+    height: 100px;
+    width: 300px;
+    border: solid 3px #23FF00;
+    color: #23FF00;
+    text-shadow: 1px 1px white;
+    font-size: 3em;
+    background-color: black;
+  }
+  
+  .buttons__restartGame:hover {
+    border-radius: 25%;
+    color: #FF0013;
+  }
+
+  @-webkit-keyframes thirdFastestOpponent {
+    0%   {left:0px; top:550px;}
+    100% {left:125%; top:550px;}
+  }
+  
+  /* Standard syntax */
+  @keyframes thirdFastestOpponent {
+    0%   {left:0px; top:550px;}
+    100%  {left:125%; top:550px;}
+  }
+  
+  @-webkit-keyframes secondFastestOpponent {
+    0%   {left:0px; top:475px;}
+    100% {left:125%; top:475px;}
+  }
+  
+  /* Standard syntax */
+  @keyframes secondFastestOpponent {
+    0%   {left:0px; top:475px;}
+    100%  {left:125%; top:475px;}
+  }
+
+  @-webkit-keyframes fastestOpponent {
+    0%   {left:0px; top:400px;}
+    100% {left:125%; top:400px;}
+  }
+  
+  /* Standard syntax */
+  @keyframes fastestOpponent {
+    0%   {left:0px; top:400px;}
+    100%  {left:125%; top:400px;}
+  }
+  
+  
+  }
+
+@media screen and (min-height : 701px) {
+
+  .sentence {
+    top:200px;
+    color: #23FF00;
+    font-size: 5em;
+  }
+
+  .App-header {
+    background-color: black;
+    border-bottom: solid 4px #23FF00;
+    height: 150px;
+    width: calc(100% - 40px);
+    padding: 20px;
+    color: #23FF00;
+    /* background-image: url("../images/backgrounds/header.png"); */
+    background-size: contain;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    z-index: 1;
+  }
+  
+  .App-title {
+    font-size: 1.5em;
+  }
 .timer {
   color:#23FF00;
   -webkit-text-stroke-width: 3px;
@@ -115,19 +899,7 @@ body {
   text-shadow: 2px 2px #0040FF;
 }
   
-  @keyframes opacity {
-    0% {
-      opacity: 1;
-    }
-  
-    50% {
-      opacity: 0
-    }
-  
-    100% {
-      opacity: 1;
-    }
-  }
+
 /* All Buttons */
 .button__Wrapper{
   position: absolute; 
@@ -193,78 +965,100 @@ body {
 position: absolute;
 top: 390px;
 left: 0%;
+height:198px;
+width:200px;
+background-repeat: no-repeat;
+background-image: url("../images/rockets/playerRocketRegular.png");
 }
 
 .playerPosTwo{
   position: absolute;
   top: 390px;
   left: 15%;
-  animation: shake 0.5s; 
-  animation-iteration-count: infinite; 
+  height:198px;
+  width:200px;
+  background-repeat: no-repeat;
+  background-image: url("../images/rockets/playerRocketRegular.png");
   }
 
   .playerPosThree{
     position: absolute;
     top: 390px;
     left: 25%;
-    animation: shake 0.5s; 
-    animation-iteration-count: infinite; 
+    height:198px;
+    width:200px;
+    background-repeat: no-repeat;
+    background-image: url("../images/rockets/playerRocketRegular.png");
     }
 
   .playerPosFour{
     position: absolute;
     top: 390px;
-    left: 35%;
-    animation: shake 0.5s; 
-    animation-iteration-count: infinite; 
+    left: 35%; 
+    height:198px;
+    width:200px;
+    background-repeat: no-repeat;
+    background-image: url("../images/rockets/playerRocketRegular.png");
     }
 
   .playerPosFive{
     position: absolute;
     top: 390px;
     left: 45%;
-    animation: shake 0.5s; 
-    animation-iteration-count: infinite; 
+    height:198px;
+    width:200px;
+    background-repeat: no-repeat;
+    background-image: url("../images/rockets/playerRocketRegular.png");
     }
   
   .playerPosSix{
     position: absolute;
     top: 390px;
     left: 55%;
-    animation: shake 0.5s; 
-    animation-iteration-count: infinite; 
+    height:198px;
+    width:200px;
+    background-repeat: no-repeat;
+    background-image: url("../images/rockets/playerRocketRegular.png");
     }
 
   .playerPosSeven{
     position: absolute;
     top: 390px;
-    left: 65%;
-    animation: shake 0.5s; 
-    animation-iteration-count: infinite; 
+    left: 65%;;
+    height:198px;
+    width:200px;
+    background-repeat: no-repeat;
+    background-image: url("../images/rockets/playerRocketRegular.png"); 
     }
 
   .playerPosEight{
     position: absolute;
     top: 390px;
     left: 75%;
-    animation: shake 0.5s; 
-    animation-iteration-count: infinite; 
+    height:198px;
+    width:200px;
+    background-repeat: no-repeat;
+    background-image: url("../images/rockets/playerRocketRegular.png"); 
     }
 
   .playerPosNine{
     position: absolute;
     top: 390px;
     left: 85%;
-    animation: shake 0.5s; 
-    animation-iteration-count: infinite; 
+    height:198px;
+    width:200px;
+    background-repeat: no-repeat;
+    background-image: url("../images/rockets/playerRocketRegular.png");
     }
   
   .playerPosTen{
     position: absolute;
     top: 390px;
     left: 110%;
-      animation: shake 0.5s; 
-  animation-iteration-count: infinite; 
+    height:198px;
+    width:200px;
+    background-repeat: no-repeat;
+    background-image: url("../images/rockets/playerRocketRegular.png");
     }
 
   .endOfRound{
@@ -273,32 +1067,32 @@ left: 0%;
     animation: shake 0.5s;
     animation-iteration-count: infinite;
     left: calc(50% - 172.5px);
+    height:700px;
+    width:345px;
+    background-repeat: no-repeat;
+    background-image: url("../images/rockets/playerRocketRotatedRegular.png");
   }
 
-  @keyframes shake {
-    0% { transform: translate(1px, 1px) rotate(0deg); }
-    10% { transform: translate(-1px, -2px) rotate(-1deg); }
-    20% { transform: translate(-3px, 0px) rotate(1deg); }
-    30% { transform: translate(3px, 2px) rotate(0deg); }
-    40% { transform: translate(1px, -1px) rotate(1deg); }
-    50% { transform: translate(-1px, 2px) rotate(-1deg); }
-    60% { transform: translate(-3px, 1px) rotate(0deg); }
-    70% { transform: translate(3px, 1px) rotate(-1deg); }
-    80% { transform: translate(-1px, -1px) rotate(1deg); }
-    90% { transform: translate(1px, 2px) rotate(0deg); }
-    100% { transform: translate(1px, -2px) rotate(-1deg); }
-}
+
 
 /* Opponent 1 */
 .opponentOne{
   position: absolute;
   top: 540px;
   left: 0%;
+  height:198px;
+  width:200px;
+  background-repeat: no-repeat;
+  background-image: url("../images/rockets/greenRocketRegular.png");
 }
 
 .opponentOneMoving{
   position: absolute;
   top: 540px;
+  height:198px;
+  width:200px;
+  background-repeat: no-repeat;
+  background-image: url("../images/rockets/greenRocketRegular.png");
   -webkit-animation-name: fastestOpponent; /* Safari 4.0 - 8.0 */
   -webkit-animation-duration: 60s; /* Safari 4.0 - 8.0 */
   animation-name: fastestOpponent;
@@ -309,17 +1103,7 @@ left: 0%;
   animation: shake 0.5s; 
   animation-iteration-count: infinite; 
 }
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes fastestOpponent {
-  0%   {left:0px; top:540px;}
-  100% {left:125%; top:540px;}
-}
 
-/* Standard syntax */
-@keyframes fastestOpponent {
-  0%   {left:0px; top:540px;}
-  100%  {left:125%; top:540px;}
-}
 
   /* Opponent 2 */
 
@@ -327,26 +1111,23 @@ left: 0%;
   position: absolute;
   top: 690px;
   left: 0%;
+  height:198px;
+  width:200px;
+  background-repeat: no-repeat;
+  background-image: url("../images/rockets/redRocketRegular.png");
   }
 
   .opponentTwoMoving{
     position: absolute;
     top: 690px;
+    height:198px;
+    width:200px;
+    background-repeat: no-repeat;
+    background-image: url("../images/rockets/redRocketRegular.png");
     -webkit-animation-name: secondFastestOpponent; /* Safari 4.0 - 8.0 */
     -webkit-animation-duration: 75s; /* Safari 4.0 - 8.0 */
     animation-name: secondFastestOpponent;
     animation-duration: 75s;
-  }
-  /* Safari 4.0 - 8.0 */
-  @-webkit-keyframes secondFastestOpponent {
-    0%   {left:0px; top:690px;}
-    100% {left:125%; top:690px;}
-  }
-  
-  /* Standard syntax */
-  @keyframes secondFastestOpponent {
-    0%   {left:0px; top:690px;}
-    100%  {left:125%; top:690px;}
   }
 
     /* Opponent 3 */
@@ -355,27 +1136,25 @@ left: 0%;
   position: absolute;
   top: 840px;
   left: 0%;
+  height:198px;
+  width:200px;
+  background-repeat: no-repeat;
+  background-image: url("../images/rockets/pinkRocketRegular.png");
 }
 
 .opponentThreeMoving{
   position: absolute;
   top: 840px;
+  height:198px;
+  width:200px;
+  background-repeat: no-repeat;
+  background-image: url("../images/rockets/pinkRocketRegular.png");
   -webkit-animation-name: thirdFastestOpponent; /* Safari 4.0 - 8.0 */
   -webkit-animation-duration: 110s; /* Safari 4.0 - 8.0 */
   animation-name: thirdFastestOpponent;
   animation-duration: 110s;
 }
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes thirdFastestOpponent {
-  0%   {left:0px; top:840px;}
-  100% {left:125%; top:840px;}
-}
 
-/* Standard syntax */
-@keyframes thirdFastestOpponent {
-  0%   {left:0px; top:840px;}
-  100%  {left:125%; top:840px;}
-}
 
 
 /* the end of each round */
@@ -558,17 +1337,7 @@ left: 0%;
   background-size: cover;
 }
 
-@-webkit-keyframes onLoadScale {
-  100% {
-      -webkit-transform: scale(1,1); 
-  }
-}
 
-@keyframes onLoadScale {
-  100% {
-      transform: scale(1,1); 
-  }
-}
 
 /* shadow planet */
 .planetOneShadow {
@@ -688,56 +1457,6 @@ left: 0%;
   background-size: cover;
 }
 
-/* Stars */
-.starsTopLayer{
-  position: absolute;
-  width:100%;
-  height:100%;
-  background-image: url("../images/stars/starsfront.png");
-  background-size: contain;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  -webkit-animation-name: starryNight; /* Safari 4.0 - 8.0 */
-  -webkit-animation-duration: 130s; /* Safari 180.0 - 8.0 */
-  animation-name: starryNight;
-  animation-duration: 130s;
-  z-index: 0;
-}
-
-.starsMiddleLayer{
-  position: absolute;
-  width:100%;
-  height:100%;
-  background-image: url("../images/stars/starsfront2.png");
-  background-size: contain;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  -webkit-animation-name: starryNight; /* Safari 4.0 - 8.0 */
-  -webkit-animation-duration: 90s; /* Safari 180.0 - 8.0 */
-  animation-name: starryNight;
-  animation-duration: 90s;
-  z-index: 0;
-}
-
-
-@-webkit-keyframes starryNight {
-  0%   {right:0px; top:0px;}
-  100%  {right:100%; top:0px;}
-
-}
-
-/* Standard syntax */
-@keyframes starryNight {
-  0%   {right:0px; top:0px;}
-  100%  {right:100%; top:0px;}
-
-}
-
-
 /* End of Round Display Stats */
 .answered {
   position: absolute;
@@ -818,3 +1537,88 @@ left: 0%;
   border-radius: 25%;
   color: #FF0013;
 }
+
+@-webkit-keyframes thirdFastestOpponent {
+  0%   {left:0px; top:840px;}
+  100% {left:125%; top:840px;}
+}
+
+/* Standard syntax */
+@keyframes thirdFastestOpponent {
+  0%   {left:0px; top:840px;}
+  100%  {left:125%; top:840px;}
+}
+
+@-webkit-keyframes secondFastestOpponent {
+  0%   {left:0px; top:690px;}
+  100% {left:125%; top:690px;}
+}
+
+/* Standard syntax */
+@keyframes secondFastestOpponent {
+  0%   {left:0px; top:690px;}
+  100%  {left:125%; top:690px;}
+}
+
+@-webkit-keyframes fastestOpponent {
+  0%   {left:0px; top:540px;}
+  100% {left:125%; top:540px;}
+}
+
+/* Standard syntax */
+@keyframes fastestOpponent {
+  0%   {left:0px; top:540px;}
+  100%  {left:125%; top:540px;}
+}
+
+
+}
+
+
+
+
+/* Animations */
+@keyframes opacity {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes onLoadScale {
+  100% {
+      -webkit-transform: scale(1,1); 
+  }
+}
+
+@keyframes onLoadScale {
+  100% {
+      transform: scale(1,1); 
+  }
+}
+
+/* Safari 4.0 - 8.0 */
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+/* Safari 4.0 - 8.0 */
+

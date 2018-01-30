@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
-import './css/App.css';
-// import ReactHowler from 'howler'
-// import { Howl } from 'howler'
+import './css/styles.css';
+import './css/tablets.css';
+import './css/desktopMin-width1224.css';
+import './css/desktop.css';
+
+
 
 
 import TextToSpeech from './components/textToSpeech.js';
@@ -33,7 +36,8 @@ class App extends Component {
     this.state = {'timer': ''};
     this.state = {'backgroundColor': <div className="redBackground" />};
     this.state = {'playButtonText': 'CLICK HERE TO START!'};
-    this.state = {'playButton': <div className="button__Wrapper"><button className="buttons__start" onClick={this.startGame.bind(this)}>{this.state.playButtonText}</button></div>};
+    this.state = {'playButton': <div><div className="button__Wrapper"><button className="buttons__start" onClick={this.startGame.bind(this)}>{this.state.playButtonText}</button>
+                                  </div><div className="demo">This game is a demo.  It is only currently set up to work with the two most popular desktop resolutions.</div></div>};
   }
   
   componentWillMount(){
@@ -585,8 +589,6 @@ raceOver(){
           {this.state.scores}
           {this.state.timer}
         </header>
-        {/* <div className="starsTopLayer" />
-        <div className="starsMiddleLayer" /> */}
         {this.state.sentence}
         {this.state.stats}
         {this.state.playButton}

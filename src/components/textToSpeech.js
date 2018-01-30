@@ -1,20 +1,17 @@
 var speechSynthesis = require('speech-synthesis');
 
-// let msg = new SpeechSynthesisUtterance('La política es dar multas a los infractores.', "Google UK English Male");
-// window.speechSynthesis.speak(msg);
-
-
-// let preKWordsArray = ["a", "and", "away", "big", "blue", "can", "come", "down", "find", "for", "funny", "go", "help", "here", "I", "in", "is", "it", "jump", "little", "look", "make", "me", "my", "not", "one", "play", "red", "run", "said", "see", "the", "three", "to", "two", "up", "we", "where", "yellow", "you"]
-
 let actualSentencesArray = [[" I have a ", " hat.", "red", "the", "fun"], [" My ", " has a tail.", "dog", "let", "arm"],
-[" I can ", " fast!", "run", "tan", "let"], [" Do you like ", "?", "me", "do", "hi"]];
-let currentSentence = "", blankSpace = "_____", randNum = "0";
+[" I can ", " fast!", "run", "tan", "let"], [" Do you like ", "?", "me", "do", "hi"], [" I ", "a snack.", "ate", "jump", "blue"], 
+[" That is a ", "truck.", "big", "away", "can"], [" She went ", " the slide.", "down", "look", "three"], [" The sky is ", " .", "blue", "go", "find"],
+[" My friend ", " I play.", "and", "for", "look"], [" I can’t ", " my pencil.", "find", "funny", "help"], [" The rabbit is ", " the hole.", "in", "purple", "little"]];
+let currentSentence = "", blankSpace = "_____", randNum = 0;
 let currentStart = "", currentEnd = "", currentCorrectAnswer = "" , currentIncorrectAnswerOne = "", currentIncorrectAnswerTwo = "";
 
 
 const TextToSpeech = () => {
-    randNum = Math.floor(Math.random()*actualSentencesArray.length+0);
-    // console.log(randNum);
+    if(randNum === 9){
+        randNum = 0;
+    }
     currentCorrectAnswer = actualSentencesArray[randNum][2];
     currentIncorrectAnswerOne = actualSentencesArray[randNum][3];
     currentIncorrectAnswerTwo = actualSentencesArray[randNum][4];
@@ -23,6 +20,7 @@ const TextToSpeech = () => {
     currentSentence = "";
     currentSentence = currentStart + blankSpace + currentEnd;
     speechSynthesis(currentStart + " blank " + currentEnd, "Google US English");
+    randNum = randNum + 1;
     return null;
 }
 
